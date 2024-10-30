@@ -29,4 +29,4 @@ If you found an issue or would like to submit an improvement to this project, pl
 
 ## ip-tracker is still work in progress
 
-ip-tracker is a learning task with quite alot still work in progress to make it test more React concepts and achieve even more functionality
+ip-tracker is a learning task with quite alot still work in progress to make it test more concepts and achieve even more functionality
