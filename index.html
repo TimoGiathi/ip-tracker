@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ip address tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h2>IP Address Tracker</h2>
+      <div class="inputFlex">
+        <input
+          type="text"
+          name="ip-input"
+          id="ip-input"
+          placeholder="Search for any IP address or domain"
+          required
+        />
+        <img src="/images/icon-arrow.svg" alt="arrow" id="arrow" />
+      </div>
+    </header>
+    <div class="resContainer">
+      <div>
+        <h3>IP Address</h3>
+        <p id="ip-address"></p>
+      </div>
+      <div class="resDivs">
+        <h3>Location</h3>
+        <p id="location"></p>
+      </div>
+      <div class="resDivs">
+        <h3>Timezone</h3>
+        <p id="timezone"></p>
+      </div>
+      <div class="resDivs">
+        <h3>ISP</h3>
+        <p id="isp"></p>
+      </div>
+    </div>
+    <div class="map"></div>
+    <p id="errorMessage"></p>
+    <script src="index.js"></script>
+  </body>
+</html>
