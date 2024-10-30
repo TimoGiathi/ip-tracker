@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ip address tracker</title>
+    <link
+      rel="shortcut icon"
+      href="/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -20,26 +25,28 @@
         <img src="/images/icon-arrow.svg" alt="arrow" id="arrow" />
       </div>
     </header>
-    <div class="resContainer">
-      <div>
-        <h3>IP Address</h3>
-        <p id="ip-address"></p>
+    <section>
+      <div class="resContainer">
+        <div id="firstRes">
+          <h3>IP Address</h3>
+          <p id="ip-address"></p>
+        </div>
+        <div class="resDivs">
+          <h3>Location</h3>
+          <p id="location"></p>
+        </div>
+        <div class="resDivs">
+          <h3>Timezone</h3>
+          <p id="timezone"></p>
+        </div>
+        <div class="resDivs" id="lastRes">
+          <h3>ISP</h3>
+          <p id="isp"></p>
+        </div>
       </div>
-      <div class="resDivs">
-        <h3>Location</h3>
-        <p id="location"></p>
-      </div>
-      <div class="resDivs">
-        <h3>Timezone</h3>
-        <p id="timezone"></p>
-      </div>
-      <div class="resDivs">
-        <h3>ISP</h3>
-        <p id="isp"></p>
-      </div>
-    </div>
-    <div class="map"></div>
-    <p id="errorMessage"></p>
+      <div class="map"></div>
+      <p id="errorMessage"></p>
+    </section>
     <script src="index.js"></script>
   </body>
 </html>

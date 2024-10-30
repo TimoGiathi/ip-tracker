@@ -17,7 +17,10 @@ function fetchLocation() {
       const res = await fetch(
         `https://geo.ipify.org/api/v2/country?apiKey=${KEY}&ipAddress=${ipAddress}`
       );
-      if (!res.ok) throw new Error("An error occurred while fetching data");
+      if (!res.ok)
+        throw new Error(
+          "An error occurred while fetching data. Please check the IP adddress and try again"
+        );
       const data = await res.json();
       console.log(data);
 
@@ -47,6 +50,7 @@ function fetchLocation() {
     } catch (err) {
       console.error(err.message);
       errorMessage.style.display = "block";
+      errorMessage.classList.add("errorStyle");
       errorMessage.textContent = err.message;
     }
   }

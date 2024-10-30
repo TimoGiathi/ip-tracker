@@ -1,11 +1,12 @@
 /*
 - Very Dark Gray: hsl(0, 0%, 17%)
 - Dark Gray: hsl(0, 0%, 59%)*/
-
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
 }
 
 .header {
@@ -13,11 +14,11 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 30vh;
+  height: 300px;
   padding: 30px 40%;
-  position: absolute;
 }
 .header h2 {
+  font-family: "Rubik", sans-serif;
   color: #f3f3f3;
   margin-bottom: 20px;
 }
@@ -32,9 +33,14 @@ input[type="text"] {
 }
 input[type="text"]::placeholder {
   opacity: 0.6;
+  font-family: "Rubik", sans-serif;
 }
 input[type="text"]:focus {
   border: none;
+}
+section {
+  position: absolute;
+  width: 100%;
 }
 .resContainer {
   display: flex;
@@ -46,7 +52,7 @@ input[type="text"]:focus {
   margin: 0 auto;
   position: relative;
   z-index: 2;
-  top: 170px;
+  bottom: 50px;
 }
 .resDivs {
   border-left: 2px solid rgb(213, 208, 208);
@@ -63,6 +69,7 @@ input[type="text"]:focus {
 }
 .inputFlex {
   display: flex;
+  width: 500px;
 }
 #arrow {
   background-color: black;
@@ -85,4 +92,58 @@ input[type="text"]:focus {
   color: red;
   font-size: 17px;
   display: none;
+}
+.errorStyle {
+  animation-name: error-animation;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+@keyframes error-animation {
+  0% {
+    top: -60px;
+  }
+  100% {
+    top: -30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header {
+    width: 99%;
+    margin: 2px auto;
+    height: 200px;
+    padding: 20px 30%;
+  }
+  .header h2 {
+    font-size: 18px;
+    margin-bottom: 11px;
+    word-spacing: 4px;
+  }
+  .inputFlex {
+    width: 300px;
+    margin: 0 auto;
+  }
+  input[type="text"] {
+    width: 100%;
+  }
+  .resContainer {
+    flex-direction: column;
+    gap: 30px;
+    text-align: left;
+  }
+  .resDivs,
+  #firstRes {
+    border-bottom: 1px solid rgb(213, 208, 208);
+    border-left: none;
+    padding-left: 0;
+    padding-bottom: 15px;
+  }
+  #lastRes {
+    border-bottom: none;
+    padding-bottom: 5px;
+  }
+  #errorMessage {
+    width: 60%;
+  }
 }
