@@ -39,12 +39,10 @@ function fetchLocation() {
         : "N/A";
       ipDisplay.textContent = data.ip || "Not Found";
 
-      // Remove previous map instance if it exists
       if (window.map) {
         window.map.remove();
       }
 
-      // Initialize new map instance
       window.map = L.map("mapContainer").setView(
         [data.location.lat, data.location.lng],
         1
@@ -57,13 +55,22 @@ function fetchLocation() {
             '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
         }
       ).addTo(window.map);
-
       L.marker([data.location.lat, data.location.lng]).addTo(window.map);
     } catch (err) {
       console.error(err.message);
       errorMessage.style.display = "block";
       errorMessage.classList.add("errorStyle");
       errorMessage.textContent = err.message;
+
+      if (window.map) {
+        window.map.remove();
+        window.map = null;
+        mapContainer.remove();
+      }
+      ispDisplay.textContent = "N/A";
+      locationDisplay.textContent = "N/A";
+      timeDisplay.textContent = "N/A";
+      ipDisplay.textContent = "Not Found";
     }
   }
 
