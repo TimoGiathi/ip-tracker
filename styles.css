@@ -121,7 +121,7 @@ section {
 #mapContainer {
   position: relative;
   left: 0;
-  top: -58px; /* Adjusted to bring mapContainer closer to header */
+  top: -93px;
   right: 0;
   height: calc(100vh - 300px);
   z-index: 1;
