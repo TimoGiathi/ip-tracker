@@ -29,7 +29,8 @@ function fetchLocation() {
 
       const data = await res.json();
       console.log(data);
-
+      if (data.location.country === "ZZ")
+        throw new Error("Enter a valid IP address");
       ispDisplay.textContent = data.isp || "N/A";
       locationDisplay.textContent = data.location.city
         ? `${data.location.city}, ${data.location.country}`
