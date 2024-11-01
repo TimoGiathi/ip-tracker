@@ -1,13 +1,14 @@
 # ip-tracker (Frontend)
 
-![ip-tracker Landing Page](/images/ip-tracker%20landing%20page1.PNG)
+![ip-tracker Landing Page](/images/ip-address-tracker-landing%20page.PNG)
 
 ## A functional frontend website for fetching location based on IP address
 
-This project is completely built by html,css and vanilla JS and fetches data from the ipify API is a useful demo with the following features:
+This project is completely built by HTML,CSS,Vanilla JS,Leaflet.js and fetches data from the ipify API is a useful demo with the following features:
 
 - Search input to enter the IP address
 - A display to show the region, the timezone,IP address and the internet service provider
+- A section to display a map based on the location of the IP address
 
 ## How to install this demo to your local pc
 
@@ -22,6 +23,7 @@ Since this is a learning project, I'd encourage you to clone and rename the proj
 2. Styling using CSS
 3. Adding resposivess to a web page
 4. Handling errors in data fetching
+5. Working with maps using Leaflet.js
 
 ## Have any ideas to improve ip-tracker?
 
@@ -29,4 +31,4 @@ If you found an issue or would like to submit an improvement to this project, pl
 
 ## ip-tracker is still work in progress
 
-ip-tracker is a learning task with quite alot still work in progress to make it test more React concepts and achieve even more functionality
+ip-tracker is a learning task with quite alot still work in progress to make it test more concepts and achieve even more functionality
